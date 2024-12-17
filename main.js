@@ -3,6 +3,10 @@ window.onload = function () {
   audio.play();
 };
 
+// HTML
+const searchBar = document.querySelector("#Searchbar");
+const submitButton = document.querySelector("#SubmitSearchButton");
+
 // API
 const apiEndpoint = `https://pokeapi.co/api/v2/pokemon/`;
 
@@ -30,4 +34,9 @@ function pokeResult(data) {
 }
 
 // To be hooked up to a searchbar later
-pokeSearch(`pikachu`);
+// pokeSearch(searchBar.value);
+
+// Search
+submitButton.addEventListener("click", () => {
+  pokeSearch(searchBar.value);
+});
