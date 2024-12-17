@@ -1,0 +1,45 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.Header {
+    background-color: #FF0000;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Logo img {
+    height: 80px;
+}
+
+/*
+.Body {
+
+}
+*/
+
+/*
+.SeachContainer {
+
+}
+
+.SearchBar {
+
+}
+
+.SearchOptions {
+
+}
+*/
+
+.Footer {
+    background-color: #EF5350;
+    height: 80px;
+    width: 100%;
+    bottom: 0px;
+    position: absolute;
+}
