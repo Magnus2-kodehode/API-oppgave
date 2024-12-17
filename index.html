@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PokéAPI</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend">
-    <link rel="stylesheet" href="style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
   </head>
   <body>
     <div class="Header">
-      <img class="Logo" src="./images/api.png" alt="">
+      <img class="Logo" src="./images/api.png" alt="" />
     </div>
 
     <div class="Body">
       <div class="SearchContainer">
         <div class="Searchbar">
-          <input class="SearchbarInput" type="text" placeholder="Search...">
-          <div class="SearchbarButton">Search</div>
+          <input
+            class="SearchbarInput"
+            type="text"
+            placeholder="Search..."
+            id="Searchbar"
+          />
+          <div class="SearchbarButton" id="SubmitSearchButton">Search</div>
         </div>
         <div class="SearchOptions">
           <div class="Filter"></div>
@@ -49,6 +57,6 @@
 
     <div class="Footer"></div>
 
-    <audio src="./audio/gogogo.mp3" id="background-music" loop>
+    <audio src="./audio/gogogo.mp3" id="background-music" loop></audio>
   </body>
 </html>
