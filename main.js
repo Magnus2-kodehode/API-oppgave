@@ -1,3 +1,4 @@
 window.onload = function () {
-  const audio = document.getElementById("background-music").play();
+  const audio = document.getElementById("background-music");
+  audio.play();
 };
