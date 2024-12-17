@@ -3,24 +3,29 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Pokeapi</title>
+    <title>PokéAPI</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend">
     <link rel="stylesheet" href="style.css"/>
     <script src="main.js" defer></script>
   </head>
   <body>
     <div class="Header">
-      <div class="Logo">
-        <img src="./images/api.png" alt="">
-      </div>
+      <img class="Logo" src="./images/api.png" alt="">
     </div>
 
     <div class="Body">
       <div class="SearchContainer">
         <div class="Searchbar">
-          <div class="SearchbarInput"></div>
-          <div class="SearchbarButton"></div>
+          <input class="SearchbarInput" type="text" placeholder="Search...">
+          <div class="SearchbarButton">Search</div>
         </div>
-        <div class="SearchOptions"></div>
+        <div class="SearchOptions">
+          <div class="Filter"></div>
+          <div class="SortBy"></div>
+        </div>
+      </div>
+      <div class="Main">
+        <div class="PokemonList"></div>
       </div>
     </div>
 

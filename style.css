@@ -1,6 +1,12 @@
 * {
+    font-family: "Lexend", sans-serif;
+    font-size: 14px;
     padding: 0px;
     margin: 0px;
+}
+
+body {
+    background-color: #EFF1F0;
 }
 
 .Header {
@@ -12,21 +18,18 @@
     align-items: center;
 }
 
-.Logo img {
+.Logo {
     height: 80px;
 }
-
-/*
-.Body {
-
-}
-*/
 
 .SearchContainer {
     /* border: 1px #000000 solid; */
     width: fit-content;
     top: 20px;
     margin: auto;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
     position: relative;
 }
 
@@ -38,24 +41,46 @@
 }
 
 .SearchbarInput {
+    font-size: 20px;
+    background: #FFFFFF;
     border: 2px #355C9D solid;
     border-radius: 10px 0px 0px 10px;
+    outline: none;
     height: 100%;
     width: 350px;
+    padding: 0px 8px;
+}
+
+.SearchbarInput:focus {
+    outline: 2px #355C9D solid;
 }
 
 .SearchbarButton {
+    font-size: 20px;
+    background: #FFFFFF;
     border: #666666 solid;
     border-width: 2px 2px 2px 0px;
     border-radius: 0px 10px 10px 0px;
     height: 100%;
-    width: 84px;
+    width: fit-content;
+    padding: 0px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .SearchOptions {
     height: 30px;
     padding: 0px 8px;
     justify-content: space-between;
+}
+
+.Main {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .Footer {
