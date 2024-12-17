@@ -81,9 +81,9 @@ body {
 }
 
 .SearchOptions {
-    border: 1px #000000 solid;
+    /* border: 1px #000000 solid; */
     height: 30px;
-    padding: 0px 8px;
+    padding: 0px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
