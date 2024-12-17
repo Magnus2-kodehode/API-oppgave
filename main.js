@@ -1,7 +1,7 @@
-window.onload = function () {
-  const audio = document.getElementById("background-music");
-  audio.play();
-};
+// window.onload = function () {
+//   const audio = document.getElementById("background-music");
+//   audio.play();
+// };
 
 // API
 const apiEndpoint = `https://pokeapi.co/api/v2/pokemon/`;
