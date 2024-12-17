@@ -143,6 +143,9 @@ body {
 }
 
 .PokemonSort {
+    background: #EBF1F5;
+    border: #000000 solid;
+    border-width: 0px 0px 1px 0px;
     height: 30px;
     display: flex;
 }
@@ -153,62 +156,70 @@ body {
 }
 
 .PokemonImage {
-    border: 1px #000000 solid;
     height: 100%;
     width: 100px;
     justify-content: center;
 }
 
 .PokemonNumber {
-    border: 1px #000000 solid;
+    border: #000000 solid;
+    border-width: 0px 0px 0px 1px;
     height: 100%;
     width: 80px;
 }
 
 .PokemonName {
-    border: 1px #000000 solid;
+    border: #000000 solid;
+    border-width: 0px 0px 0px 1px;
     height: 100%;
     width: 120px;
 }
 
 .PokemonType {
-    border: 1px #000000 solid;
+    border: #000000 solid;
+    border-width: 0px 0px 0px 1px;
     height: 100%;
     width: 100px;
 }
 
 .PokemonHP {
-    border: 1px #000000 solid;
+    border: #000000 solid;
+    border-width: 0px 0px 0px 1px;
     height: 100%;
     width: 60px;
 }
 
 .PokemonAttack {
-    border: 1px #000000 solid;
+    border: #000000 solid;
+    border-width: 0px 0px 0px 1px;
     height: 100%;
     width: 70px;
 }
 
 .PokemonDefence {
-    border: 1px #000000 solid;
+    border: #000000 solid;
+    border-width: 0px 0px 0px 1px;
     height: 100%;
     width: 100px;
 }
 
 .PokemonSpAtk {
-    border: 1px #000000 solid;
+    border: #000000 solid;
+    border-width: 0px 0px 0px 1px;
     height: 100%;
     width: 90px;
 }
 
 .PokemonSpDef {
-    border: 1px #000000 solid;
+    border: #000000 solid;
+    border-width: 0px 0px 0px 1px;
     height: 100%;
     width: 90px;
 }
 
 .PokemonSpeed {
-    border: 1px #000000 solid;
+    border: #000000 solid;
+    border-width: 0px 0px 0px 1px;
     height: 100%;
     width: 90px;
 }
