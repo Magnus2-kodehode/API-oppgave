@@ -33,13 +33,7 @@ body {
 }
 
 .body {
-<<<<<<< Updated upstream
     gap: 35px;
-=======
-    background-color: #EFF1F0;
-    padding-bottom: 50px;
-    gap: 45px;
->>>>>>> Stashed changes
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -93,6 +87,14 @@ body {
     cursor: pointer;
 }
 
+.searchbarButton:hover {
+    background-color: #EEEEEE;
+}
+
+.searchbarButton:active {
+    background-color: #DDDDDD;
+}
+
 .searchOptions {
     /* border: 1px #000000 solid; */
     height: 30px;
@@ -109,6 +111,7 @@ body {
 }
 
 .filterButton {
+    background: #FFFFFF;
     border: 1px #000000 solid;
     border-radius: 20px;
     height: 24px;
@@ -123,6 +126,40 @@ body {
     width: 14px;
 }
 
+.filterDropdown {
+    /* display: inline-block; */
+    position: relative;
+}
+
+.filterDropdownContent {
+    background: #FFFFFF;
+    border: 1px #000000 solid;
+    width: fit-content;
+    margin-top: 24px;
+    display: none;
+    position: absolute;
+    cursor: pointer;
+}
+
+.filterDropdownContent p {
+    color: #000000;
+    padding: 3px 5px;
+    padding-right: 20px;
+    display: block;
+}
+
+.filterDropdownContent p:hover {
+    background: #EEEEEE;
+}
+
+.filterDropdownContent p:active {
+    background: #DDDDDD;
+}
+
+.filterDropdown:hover .filterDropdownContent {
+    display: block;
+}
+
 .sortBy {
     font-size: 16px;
     gap: 5px;
@@ -130,10 +167,12 @@ body {
 }
 
 .sortByButton {
+    background: #FFFFFF;
     border: 1px #000000 solid;
     border-radius: 20px;
     height: 24px;
     width: 150px;
+    padding-left: 5px;
     gap: 5px;
     display: flex;
     justify-content: end;
@@ -142,10 +181,47 @@ body {
 }
 
 .sortByButton img {
+    background: #FFFFFF;
     outline: 1px #000000 solid;
     border-radius: 20px;
     width: 14px;
     padding: 7px 5px;
+}
+
+.sortByDropdown {
+    /* display: inline-block; */
+    position: relative;
+}
+
+.sortByDropdownContent {
+    background: #FFFFFF;
+    border: 1px #000000 solid;
+    width: 150px;
+    right: 0px;
+    margin-top: 24px;
+    display: none;
+    justify-content: end;
+    position: absolute;
+    cursor: pointer;
+}
+
+.sortByDropdownContent p {
+    color: #000000;
+    padding: 3px 5px;
+    padding-right: 20px;
+    display: block;
+}
+
+.sortByDropdownContent p:hover {
+    background: #EEEEEE;
+}
+
+.sortByDropdownContent p:active {
+    background: #DDDDDD;
+}
+
+.sortByDropdown:hover .sortByDropdownContent {
+    display: block;
 }
 
 .main {
@@ -212,6 +288,7 @@ body {
 }
 
 .pokemonItemPosition {
+    background: #FFFFFF;
     padding: 0px 5px;
     display: flex;
     justify-content: center;
@@ -297,15 +374,29 @@ body {
 }
 
 .sidePanelLeft {
-    border: 1px #000000 solid;
-    height: 650px;
+    border: 2px #000000 solid;
+    height: fit-content;
+    min-height: 10px;
     width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidePanelLeft img {
+    width: 100%;
 }
 
 .sidePanelRight {
-    border: 1px #000000 solid;
-    height: 650px;
+    border: 2px #000000 solid;
+    height: fit-content;
+    min-height: 10px;
     width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidePanelRight img {
+    width: 100%;
 }
 
 .footer {
@@ -316,5 +407,20 @@ body {
     height: 80px;
     width: 100%;
     bottom: 0px;
-    position: absolute;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    color: #FF0000;
+    font-size: 7px;
+}
+
+.background {
+    width: 100%;
+    opacity: 7%;
+    z-index: -1;
+    position: fixed;
 }
