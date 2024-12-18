@@ -9,7 +9,7 @@ body {
     background-color: #EFF1F0;
 }
 
-.Header {
+.header {
     background-color: #FF0000;
     border: #000000 solid;
     border-width: 0px 0px 1px 0px;
@@ -21,11 +21,11 @@ body {
     align-items: center;
 }
 
-.Logo {
+.logo {
     height: 80px;
 }
 
-.Body {
+.body {
     gap: 35px;
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@ body {
     align-items: center;
 }
 
-.SearchContainer {
+.searchContainer {
     /* border: 1px #000000 solid; */
     width: fit-content;
     top: 20px;
@@ -43,14 +43,14 @@ body {
     position: relative;
 }
 
-.Searchbar {
+.searchbar {
     /* border: 1px #000000 solid; */
     height: 40px;
     width: fit-content;
     display: flex;
 }
 
-.SearchbarInput {
+.searchbarInput {
     font-size: 20px;
     background: #FFFFFF;
     border: 2px #355C9D solid;
@@ -61,11 +61,11 @@ body {
     padding: 0px 8px;
 }
 
-.SearchbarInput:focus {
+.searchbarInput:focus {
     outline: 2px #355C9D solid;
 }
 
-.SearchbarButton {
+.searchbarButton {
     font-size: 20px;
     background: #FFFFFF;
     border: #666666 solid;
@@ -80,7 +80,7 @@ body {
     cursor: pointer;
 }
 
-.SearchOptions {
+.searchOptions {
     /* border: 1px #000000 solid; */
     height: 30px;
     padding: 0px 10px;
@@ -89,13 +89,13 @@ body {
     align-items: center;
 }
 
-.Filter {
+.filter {
     font-size: 16px;
     gap: 5px;
     display: flex;
 }
 
-.FilterButton {
+.filterButton {
     border: 1px #000000 solid;
     border-radius: 20px;
     height: 24px;
@@ -106,17 +106,17 @@ body {
     cursor: pointer;
 }
 
-.FilterButton img {
+.filterButton img {
     width: 14px;
 }
 
-.SortBy {
+.sortBy {
     font-size: 16px;
     gap: 5px;
     display: flex;
 }
 
-.SortByButton {
+.sortByButton {
     border: 1px #000000 solid;
     border-radius: 20px;
     height: 24px;
@@ -128,67 +128,55 @@ body {
     cursor: pointer;
 }
 
-.SortByButton img {
-    border: 1px #000000 solid;
+.sortByButton img {
+    outline: 1px #000000 solid;
     border-radius: 20px;
     width: 14px;
     padding: 7px 5px;
 }
 
-.Main {
+.main {
     gap: 30px;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.ButtonSort {
+.buttonSort {
     /* border: 1px #000000 solid; */
-    height: 20px;
+    height: fit-content;
     width: 14px;
     gap: 2px;
     display: flex;
     flex-direction: column;
 }
 
-.Arrow2 {
+.arrow2 {
     /* border: 1px #000000 solid; */
     border: none;
     border-radius: 3px;
-    height: 10px;
+    height: 12px;
     width: 100%;
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
 
-.Arrow2 img {
+.arrow2 img {
     width: 10px;
 }
 
-.PokemonListItemPosition {
-    padding: 0px 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.arrow2:hover {
+    background-color: #CCCCCC;
 }
 
-.PokemonItemPosition {
-    padding: 0px 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.arrow2:active {
+    background-color: #AAAAAA;
 }
 
-.PokemonList {
-    border: #000000 solid;
-    border-width: 1px 0px 0px 0px;
-    height: fit-content;
-    width: fit-content;
-}
-
-.PokemonSort {
+.pokemonSort {
     background: #EBF1F5;
     border: #000000 solid;
     border-width: 0px 0px 1px 0px;
@@ -196,14 +184,35 @@ body {
     display: flex;
 }
 
-.Pokemon {
+.pokemonList {
+    border: #000000 solid;
+    border-width: 1px 0px 0px 0px;
+    height: fit-content;
+    width: fit-content;
+}
+
+.pokemonListItemPosition {
+    padding: 0px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pokemonItemPosition {
+    padding: 0px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon {
     border: #000000 solid;
     border-width: 0px 0px 1px 0px;
     height: 100px;
     display: flex;
 }
 
-.PokemonImage {
+.pokemonImage {
     border: #000000 solid;
     border-width: 0px 0px 0px 1px;
     height: 100%;
@@ -211,82 +220,82 @@ body {
     justify-content: center;
 }
 
-.PokemonNumber {
+.pokemonNumber {
     border: #000000 solid;
     border-width: 0px 0px 0px 1px;
     height: 100%;
     width: 80px;
 }
 
-.PokemonName {
-    border: #000000 solid;
-    border-width: 0px 0px 0px 1px;
-    height: 100%;
-    width: 120px;
-}
-
-.PokemonType {
+.pokemonName {
     border: #000000 solid;
     border-width: 0px 0px 0px 1px;
     height: 100%;
     width: 100px;
 }
 
-.PokemonHP {
+.pokemonType {
+    border: #000000 solid;
+    border-width: 0px 0px 0px 1px;
+    height: 100%;
+    width: 100px;
+}
+
+.pokemonHP {
     border: #000000 solid;
     border-width: 0px 0px 0px 1px;
     height: 100%;
     width: 60px;
 }
 
-.PokemonAttack {
+.pokemonAttack {
     border: #000000 solid;
     border-width: 0px 0px 0px 1px;
     height: 100%;
     width: 70px;
 }
 
-.PokemonDefence {
+.pokemonDefence {
     border: #000000 solid;
     border-width: 0px 0px 0px 1px;
     height: 100%;
     width: 100px;
 }
 
-.PokemonSpAtk {
+.pokemonSpAtk {
     border: #000000 solid;
     border-width: 0px 0px 0px 1px;
     height: 100%;
     width: 90px;
 }
 
-.PokemonSpDef {
+.pokemonSpDef {
     border: #000000 solid;
     border-width: 0px 0px 0px 1px;
     height: 100%;
     width: 90px;
 }
 
-.PokemonSpeed {
+.pokemonSpeed {
     border: #000000 solid;
     border-width: 0px 1px 0px 1px;
     height: 100%;
     width: 90px;
 }
 
-.SidePanelLeft {
+.sidePanelLeft {
     border: 1px #000000 solid;
     height: 650px;
     width: 200px;
 }
 
-.SidePanelRight {
+.sidePanelRight {
     border: 1px #000000 solid;
     height: 650px;
     width: 200px;
 }
 
-.Footer {
+.footer {
     background-color: #EF5350;
     border: #000000 solid;
     border-width: 1px 0px 0px 0px;
