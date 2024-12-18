@@ -7,6 +7,8 @@
 
 body {
     background-color: #EFF1F0;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
@@ -289,15 +291,29 @@ body {
 }
 
 .sidePanelLeft {
-    border: 1px #000000 solid;
-    height: 650px;
+    border: 2px #000000 solid;
+    height: fit-content;
+    min-height: 10px;
     width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidePanelLeft img {
+    width: 100%;
 }
 
 .sidePanelRight {
-    border: 1px #000000 solid;
-    height: 650px;
+    border: 2px #000000 solid;
+    height: fit-content;
+    min-height: 10px;
     width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidePanelRight img {
+    width: 100%;
 }
 
 .footer {
@@ -309,10 +325,11 @@ body {
     width: 100%;
     margin-top: 50px;
     display: flex;
-    align-items: end;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer p {
-    color: #ff2420;
+    color: #FF0000;
     font-size: 7px;
 }
