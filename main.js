@@ -43,49 +43,67 @@ async function pokeSearch(pokemon) {
 
 // Return Data
 function pokeResult(data1) {
+  let shinyChance = Math.random();
+  let shinyBool = false;
+  if (shinyChance > 0.9) {
+    shinyBool = true;
+  }
   const pokéContainer = document.createElement("div");
   pokéContainer.classList.add("pokemon");
   const pokéImg = document.createElement("img");
   pokéImg.classList.add("pokemonImage");
   pokéImg.classList.add("pokemonItemPosition");
-  pokéImg.src = data1.sprites.other["official-artwork"].front_default;
+  if (shinyBool === true) {
+    pokéImg.src = data1.sprites.other["official-artwork"].front_shiny;
+  } else {
+    pokéImg.src = data1.sprites.other["official-artwork"].front_default;
+  }
   const pokéID = document.createElement("p");
   pokéID.textContent = data1.id;
   pokéID.classList.add("pokemonNumber");
   pokéID.classList.add("pokemonItemPosition");
   const pokéName = document.createElement("p");
+  pokéName.textContent = data1.name;
   pokéName.classList.add("pokemonName");
   pokéName.classList.add("pokemonItemPosition");
   const pokéType = document.createElement("p");
+  pokéType.textContent = data1.types[0].type.name;
   pokéType.classList.add("pokemonType");
   pokéType.classList.add("pokemonItemPosition");
   const pokéHP = document.createElement("p");
+  pokéHP.textContent = data1.stats[0].base_stat;
   pokéHP.classList.add("pokemonHP");
   pokéHP.classList.add("pokemonItemPosition");
   const pokéATK = document.createElement("p");
+  pokéATK.textContent = data1.stats[1].base_stat;
   pokéATK.classList.add("pokemonAttack");
   pokéATK.classList.add("pokemonItemPosition");
   const pokéDEF = document.createElement("p");
+  pokéDEF.textContent = data1.stats[2].base_stat;
   pokéDEF.classList.add("pokemonDefence");
   pokéDEF.classList.add("pokemonItemPosition");
   const pokéSpATK = document.createElement("p");
+  pokéSpATK.textContent = data1.stats[3].base_stat;
   pokéSpATK.classList.add("pokemonSpAtk");
   pokéSpATK.classList.add("pokemonItemPosition");
   const pokéSpDEF = document.createElement("p");
+  pokéSpDEF.textContent = data1.stats[4].base_stat;
   pokéSpDEF.classList.add("pokemonSpDef");
   pokéSpDEF.classList.add("pokemonItemPosition");
   const pokéSPD = document.createElement("p");
+  pokéSPD.textContent = data1.stats[5].base_stat;
   pokéSPD.classList.add("pokemonSpeed");
   pokéSPD.classList.add("pokemonItemPosition");
   console.log(data1);
-  console.log(data1.name);
-  console.log(`HP ${data1.stats[0].base_stat}`);
-  console.log(`ATK ${data1.stats[1].base_stat}`);
-  console.log(`DEF ${data1.stats[2].base_stat}`);
-  console.log(`SP. ATK ${data1.stats[3].base_stat}`);
-  console.log(`SP. DEF ${data1.stats[4].base_stat}`);
-  console.log(`SPD ${data1.stats[5].base_stat}`);
-  console.log(data1.sprites.other["official-artwork"].front_default);
+  // console.log(data1.name);
+  // console.log(data1.types[0].type.name);
+  // console.log(`HP ${data1.stats[0].base_stat}`);
+  // console.log(`ATK ${data1.stats[1].base_stat}`);
+  // console.log(`DEF ${data1.stats[2].base_stat}`);
+  // console.log(`SP. ATK ${data1.stats[3].base_stat}`);
+  // console.log(`SP. DEF ${data1.stats[4].base_stat}`);
+  // console.log(`SPD ${data1.stats[5].base_stat}`);
+  // console.log(data1.sprites.other["official-artwork"].front_default);
   pokémonField.append(pokéContainer);
   pokéContainer.append(
     pokéImg,
