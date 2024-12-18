@@ -62,6 +62,9 @@ body {
 
 .header {
   background-color: #ff0000;
+  border: #000000 solid;
+  border-width: 0px 0px 1px 0px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 5px;
   height: 100px;
   width: 100%;
   display: flex;
