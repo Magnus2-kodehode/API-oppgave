@@ -91,10 +91,48 @@ body {
 
 .Filter {
     font-size: 16px;
+    gap: 5px;
+    display: flex;
+}
+
+.FilterButton {
+    border: 1px #000000 solid;
+    border-radius: 20px;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.FilterButton img {
+    width: 14px;
 }
 
 .SortBy {
     font-size: 16px;
+    gap: 5px;
+    display: flex;
+}
+
+.SortByButton {
+    border: 1px #000000 solid;
+    border-radius: 20px;
+    height: 24px;
+    width: 150px;
+    gap: 5px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    cursor: pointer;
+}
+
+.SortByButton img {
+    border: 1px #000000 solid;
+    border-radius: 20px;
+    width: 14px;
+    padding: 7px 5px;
 }
 
 .Main {
@@ -136,8 +174,16 @@ body {
     align-items: center;
 }
 
+.PokemonItemPosition {
+    padding: 0px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .PokemonList {
-    border: 1px #000000 solid;
+    border: #000000 solid;
+    border-width: 1px 0px 0px 0px;
     height: fit-content;
     width: fit-content;
 }
@@ -151,11 +197,15 @@ body {
 }
 
 .Pokemon {
+    border: #000000 solid;
+    border-width: 0px 0px 1px 0px;
     height: 100px;
     display: flex;
 }
 
 .PokemonImage {
+    border: #000000 solid;
+    border-width: 0px 0px 0px 1px;
     height: 100%;
     width: 100px;
     justify-content: center;
@@ -219,7 +269,7 @@ body {
 
 .PokemonSpeed {
     border: #000000 solid;
-    border-width: 0px 0px 0px 1px;
+    border-width: 0px 1px 0px 1px;
     height: 100%;
     width: 90px;
 }
