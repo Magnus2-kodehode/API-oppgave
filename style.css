@@ -28,7 +28,7 @@ body {
 }
 
 .body {
-    gap: 35px;
+    gap: 45px;
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -166,8 +166,8 @@ body {
     border: 1px #000000 solid;
     border-radius: 20px;
     height: 24px;
-    width: fit-content;
-    padding-left: 20px;
+    width: 150px;
+    padding-left: 5px;
     gap: 5px;
     display: flex;
     justify-content: end;
@@ -191,7 +191,7 @@ body {
 .sortByDropdownContent {
     background: #FFFFFF;
     border: 1px #000000 solid;
-    width: fit-content;
+    width: 150px;
     right: 0px;
     margin-top: 24px;
     display: none;
@@ -415,7 +415,7 @@ body {
 
 .background {
     width: 100%;
-    opacity: 10%;
+    opacity: 7%;
     z-index: -1;
     position: fixed;
 }
