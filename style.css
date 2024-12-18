@@ -96,6 +96,7 @@ body {
 }
 
 .filterButton {
+    background: #FFFFFF;
     border: 1px #000000 solid;
     border-radius: 20px;
     height: 24px;
@@ -117,10 +118,12 @@ body {
 }
 
 .sortByButton {
+    background: #FFFFFF;
     border: 1px #000000 solid;
     border-radius: 20px;
     height: 24px;
-    width: 150px;
+    width: fit-content;
+    padding-left: 10px;
     gap: 5px;
     display: flex;
     justify-content: end;
@@ -129,6 +132,7 @@ body {
 }
 
 .sortByButton img {
+    background: #FFFFFF;
     outline: 1px #000000 solid;
     border-radius: 20px;
     width: 14px;
@@ -199,6 +203,7 @@ body {
 }
 
 .pokemonItemPosition {
+    background: #FFFFFF;
     padding: 0px 5px;
     display: flex;
     justify-content: center;
@@ -302,6 +307,12 @@ body {
     box-shadow: rgb(0, 0, 0) 0px 0px 5px;
     height: 80px;
     width: 100%;
-    bottom: 0px;
-    position: absolute;
+    margin-top: 50px;
+    display: flex;
+    align-items: end;
+}
+
+.footer p {
+    color: #ff2420;
+    font-size: 7px;
 }
