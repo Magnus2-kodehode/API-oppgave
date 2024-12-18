@@ -15,7 +15,7 @@ const apiEndpointPokemon = `https://pokeapi.co/api/v2/pokemon/`;
 // Fetch Pokemon Func
 async function pokeSearch(pokemon) {
   try {
-    const result1 = await fetch(`${apiEndpointPokemon}${pokemon}`);
+    const result1 = await fetch(`${apiEndpointPokemon}${pokemon.replace(/ /g, "-")}`);
     const data1 = await result1.json();
     pokeResult(data1);
   } catch (err) {
