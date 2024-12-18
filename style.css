@@ -167,7 +167,7 @@ body {
     border-radius: 20px;
     height: 24px;
     width: fit-content;
-    padding-left: 10px;
+    padding-left: 20px;
     gap: 5px;
     display: flex;
     justify-content: end;
@@ -401,6 +401,7 @@ body {
     box-shadow: rgb(0, 0, 0) 0px 0px 5px;
     height: 80px;
     width: 100%;
+    bottom: 0px;
     margin-top: 50px;
     display: flex;
     justify-content: center;
@@ -410,4 +411,11 @@ body {
 .footer p {
     color: #FF0000;
     font-size: 7px;
+}
+
+.background {
+    width: 100%;
+    opacity: 10%;
+    z-index: -1;
+    position: fixed;
 }
