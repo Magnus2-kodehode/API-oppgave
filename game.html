@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lmao there is a badger pokemon with goon in its name @sander</title>
+    <link rel="stylesheet" href="game.css" />
+    <script src="game.js" defer></script>
+  </head>
+  <body>
+    <!--HEADER -->
+    <div class="header">
+      <img class="logo" src="./images/api.png" alt="" />
+    </div>
+    <!--Flexbox -->
+    <div class="battle-container">
+      <!-- OBSTAGOONING -->
+      <div class="pokemon player">
+        <h2 class="pokemon-name">Obstagoon</h2>
+        <img src="images/obstagoon.png" />
+        <p>HP: <span id="player-hp">150</span></p>
+      </div>
+
+      <!-- CHARMANDER -->
+      <div class="pokemon opponent">
+        <h2 class="pokemon-name">Charmander</h2>
+        <img src="images/charmander.png" />
+        <p>HP: <span id="opponent-hp">100</span></p>
+      </div>
+    </div>
+
+    <!--ATTACK BUTTONS-->
+    <div>
+      <button class="button" id="scratch-btn">Scratch</button>
+      <button class="button" id="splash-btn">Splash</button>
+    </div>
+
+    <!-- Battle Log -->
+    <div id="battle-log"></div>
+    <div class="footer"></div>
+  </body>
+  <audio src="./audio/battle.mp3" id="background-music" loop></audio>
+</html>
