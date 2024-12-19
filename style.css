@@ -251,7 +251,7 @@ body {
   /* border: 1px #000000 solid; */
   height: fit-content;
   width: 14px;
-  gap: 2px;
+  gap: 0px;
   display: flex;
   flex-direction: column;
 }
