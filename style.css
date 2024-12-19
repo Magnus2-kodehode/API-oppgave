@@ -369,6 +369,14 @@ body {
     width: 90px;
 }
 
+.erlendSinTing {
+    border: #000000 solid;
+    border-width: 0px 1px 0px 1px;
+    height: 100%;
+    width: 100px;
+    justify-content: center;
+}
+
 .sidePanelLeft {
     border: 2px #000000 solid;
     height: fit-content;

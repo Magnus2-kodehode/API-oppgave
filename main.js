@@ -183,3 +183,75 @@ submitButton.addEventListener("click", () => {
 //   }
 // }
 // testFetch();
+
+
+
+// TESTING SORTING BUTTONS
+
+// Sorting function for strings
+function sortStrings(attribute, ascending = true) {
+  const pokemonList = Array.from(document.querySelectorAll('.pokemon'));
+
+  pokemonList.sort((a, b) => {
+    const valueA = a.querySelector(`.${attribute}`).textContent.toLowerCase();
+    const valueB = b.querySelector(`.${attribute}`).textContent.toLowerCase();
+
+    if (ascending) {
+      return valueA.localeCompare(valueB); // Ascending
+    } else {
+      return valueB.localeCompare(valueA); // Ascending
+    };
+  });
+
+  // Reorder the list based on sorted results
+  const pokemonContainer = document.querySelector('.pokemonList');
+  pokemonList.forEach((pokemon) => {
+    pokemonContainer.appendChild(pokemon); // Reattach in sorted order
+  });
+};
+
+// Sorting function for numbers
+function sortPokemons(attribute, ascending = true) {
+  const pokemonList = Array.from(document.querySelectorAll('.pokemon'));
+
+  pokemonList.sort((a, b) => {
+    const valueA = a.querySelector(`.${attribute}`).textContent;
+    const valueB = b.querySelector(`.${attribute}`).textContent;
+
+    if (ascending) {
+      return valueA - valueB; // Ascending
+    } else {
+      return valueB - valueA; // Descending
+    }
+  });
+
+  // Reorder the list based on sorted results
+  const pokemonContainer = document.querySelector('.pokemonList');
+  pokemonList.forEach((pokemon) => {
+    pokemonContainer.appendChild(pokemon); // Reattach in sorted order
+  });
+};
+
+// Event listeners
+document.querySelectorAll('.arrow2').forEach((button) => {
+  button.addEventListener('click', (event) => {
+    const direction = event.target.closest('button').contains(event.target) ? 'up' : 'down';
+
+    // Determine if the button is up or down for sorting direction
+    const column = event.target.closest('.pokemonListItemPosition');
+    const attribute = column.classList[0].toLowerCase(); // Get the attribute to sort by
+    const ascending = direction === 'up';
+
+    // Choose appropriate sorting method
+    if (attribute === 'pokemonname' || attribute === 'pokemontype') {
+      sortStrings(attribute, ascending); // String sorting
+    } else {
+      sortPokemons(attribute, ascending); // Number sorting
+    };
+  });
+});
+
+// Sorting on load (optional)
+window.onload = function() {
+  sortStrings('pokemonname', true);
+};
