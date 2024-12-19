@@ -255,3 +255,24 @@ document.querySelectorAll('.arrow2').forEach((button) => {
 window.onload = function() {
   sortStrings('pokemonname', true);
 };
+
+
+// TEST TING NR. 2
+
+// Array of pokemons
+// let pokéList = [];
+
+// Sorting function
+
+
+// Event listener for sorting buttons
+const sortButtons = document.querySelectorAll('.arrow2');
+sortButtons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    const sortBy = event.target.closest('button').getAttribute('data-sort');
+    const direction = event.target.querySelector('img').src.includes('up') ? 'asc' : 'desc';
+
+    sortPokemons(sortBy, direction);
+  });
+});
+
