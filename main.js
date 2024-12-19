@@ -166,9 +166,9 @@ function sort(arr) {
       return b.id.localeCompare(a.id);
     } else if (sortBy.value == "# descending") {
       return a.id.localeCompare(b.id);
-    } else if (sortBy.value == "A-Z ascending") {
+    } else if (sortBy.value == "Name ascending") {
       return b.name.localeCompare(a.name);
-    } else if (sortBy.value == "A-Z descending") {
+    } else if (sortBy.value == "Name descending") {
       return a.name.localeCompare(b.name);
     }
   });
