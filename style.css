@@ -20,12 +20,24 @@ body {
   height: 100px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 .logo {
   height: 80px;
+}
+
+.headerPokeballLeft {
+    height: 64px;
+    width: 64px;
+    margin-left: 50px;
+}
+
+.headerPokeballRight {
+    height: 64px;
+    width: 64px;
+    margin-right: 50px;
 }
 
 .body {
