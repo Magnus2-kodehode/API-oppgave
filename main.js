@@ -127,12 +127,20 @@ function pokeResult(data1, data2) {
   pokéSPD.classList.add("pokemonItemPosition");
   // Desc
   const pokéDesc = document.createElement("p");
-  pokéDesc.textContent = data2.flavor_text_entries[0].flavor_text;
+  for (let i = 0; i < data2.flavor_text_entries.length; i++) {
+    // console.log(data2.flavor_text_entries[i]);
+    if (data2.flavor_text_entries[i].language.name != "en") {
+      continue;
+    } else {
+      pokéDesc.textContent = data2.flavor_text_entries[i].flavor_text;
+      i = Infinity;
+    }
+  }
   pokéDesc.classList.add("erlendSinTing");
   pokéDesc.classList.add("pokemonItemPosition");
-  // Log
-  console.log(data1);
-  console.log(data2.flavor_text_entries[0].flavor_text);
+  // // Log
+  // console.log(data1);
+  // console.log(data2.flavor_text_entries);
   // console.log(data1.name);
   // console.log(data1.types[0].type.name);
   // console.log(`HP ${data1.stats[0].base_stat}`);
@@ -157,7 +165,7 @@ function pokeResult(data1, data2) {
     pokéSPD,
     pokéDesc
   );
-  console.log(pokéList);
+  // console.log(pokéList);
 }
 
 function sort(arr) {
