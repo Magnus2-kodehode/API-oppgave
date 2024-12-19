@@ -1,7 +1,7 @@
-// window.onload = function () {
-//   const audio = document.getElementById("background-music");
-//   audio.play();
-// };
+window.onload = function () {
+  const audio = document.getElementById("background-music");
+  audio.play();
+};
 
 // HTML
 const searchBar = document.querySelector("#Searchbar");
