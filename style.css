@@ -48,6 +48,13 @@ body {
   align-items: center;
 }
 
+.randomPokemon {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
 .searchContainer {
   /* border: 1px #000000 solid; */
   width: fit-content;
@@ -63,6 +70,7 @@ body {
   height: 40px;
   width: fit-content;
   display: flex;
+  align-items: center;
 }
 
 .searchbarInput {
