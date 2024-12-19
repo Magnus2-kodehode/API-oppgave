@@ -10,6 +10,7 @@ const pokémonField = document.querySelector(".pokemonList");
 const sortBy = document.querySelector(".sortByDropdownContent");
 const pokéBallLeft = document.querySelector(".headerPokeballLeft");
 const pokéBallRight = document.querySelector(".headerPokeballRight");
+const pokéBallRandom = document.querySelector(".randomPokemon");
 
 let pokéList = [];
 
@@ -33,29 +34,41 @@ async function pokeSearch(pokemon) {
   }
 }
 
-// async function pokedexSearch(data1) {
-//   try {
-//     const result2 = await fetch(`${apiEndpointPodedex}`);
-//     const data2 = await result2.json();
-//     pokedexCleanup(data1, data2);
-//   } catch (err) {
-//     console.error(err);
-//   }
-// }
-
-// function pokedexCleanup(data1, data2) {
-//   const pokeID = data1.id - 1;
-//   console.log(pokeID);
-//   const data2Clean = data2.pokemon_entries[pokeID].pokemon_species;
-//   console.log(data2Clean);
-//   pokeResult(data1, data2Clean);
-// }
-
+// Uses Pokemon ID to search for species data
 async function pokeSpeciesSearch(data1) {
   try {
     const result2 = await fetch(`${apiEndpointSpecies}${data1.id}`);
     const data2 = await result2.json();
     pokeResult(data1, data2);
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+// Fetch random Pokémon
+async function pokeDex() {
+  try {
+    const result3 = await fetch(`${apiEndpointPodedex}`);
+    const data1 = await result3.json();
+    const rng =
+      data1.pokemon_entries[
+        Math.floor(Math.random() * data1.pokemon_entries.length)
+      ];
+    let randomID = rng.entry_number;
+    console.log(randomID);
+    pokeSearchRandom(randomID);
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+// Grabs Pokémon ID from random array
+async function pokeSearchRandom(data1) {
+  try {
+    const result4 = await fetch(`${apiEndpointPokemon}${data1}`);
+    const data2 = await result4.json();
+    console.log(data2);
+    pokeSpeciesSearch(data2, data1);
   } catch (err) {
     console.error(err);
   }
@@ -189,6 +202,13 @@ submitButton.addEventListener("click", () => {
   pokeSearch(searchBar.value);
 });
 
+// Random Pokémon
+// DO NOT MASH THIS BUTTON
+pokéBallRandom.addEventListener("click", () => {
+  pokeDex();
+});
+
+// Tunes
 pokéBallLeft.addEventListener("click", () => {
   randomSong();
 });
