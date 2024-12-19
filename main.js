@@ -7,23 +7,31 @@
 const searchBar = document.querySelector("#Searchbar");
 const submitButton = document.querySelector("#SubmitSearchButton");
 const pokémonField = document.querySelector(".pokemonList");
+const sortBy = document.querySelector(".sortByDropdownContent");
+
+let pokéList = [];
 
 // API
 const apiEndpointPokemon = `https://pokeapi.co/api/v2/pokemon/`;
-// const apiEndpointPodedex = `https://pokeapi.co/api/v2/pokedex/national/`;
+const apiEndpointPodedex = `https://pokeapi.co/api/v2/pokedex/national/`;
+const apiEndpointSpecies = `https://pokeapi.co/api/v2/pokemon-species/`;
 
 // Fetch Pokemon Func
 async function pokeSearch(pokemon) {
   try {
-    const result1 = await fetch(`${apiEndpointPokemon}${pokemon.replace(/ /g, "-")}`);
+    const result1 = await fetch(
+      `${apiEndpointPokemon}${pokemon.replace(/ /g, "-")}`
+    );
     const data1 = await result1.json();
-    pokeResult(data1);
+    // pokeResult(data1);
+    // pokedexSearch(data1);
+    pokeSpeciesSearch(data1);
   } catch (err) {
     console.error(err);
   }
 }
 
-// async function pokedexDearch(data1) {
+// async function pokedexSearch(data1) {
 //   try {
 //     const result2 = await fetch(`${apiEndpointPodedex}`);
 //     const data2 = await result2.json();
@@ -41,8 +49,18 @@ async function pokeSearch(pokemon) {
 //   pokeResult(data1, data2Clean);
 // }
 
+async function pokeSpeciesSearch(data1) {
+  try {
+    const result2 = await fetch(`${apiEndpointSpecies}${data1.id}`);
+    const data2 = await result2.json();
+    pokeResult(data1, data2);
+  } catch (err) {
+    console.error(err);
+  }
+}
+
 // Return Data
-function pokeResult(data1) {
+function pokeResult(data1, data2) {
   // Shiny RNG
   const shinyChance = Math.random();
   let shinyBool = false;
@@ -52,6 +70,7 @@ function pokeResult(data1) {
   // Pokémon Box
   const pokéContainer = document.createElement("div");
   pokéContainer.classList.add("pokemon");
+  pokéList.push(pokéContainer);
   // Image
   const pokéImg = document.createElement("img");
   pokéImg.classList.add("pokemonImage");
@@ -108,6 +127,7 @@ function pokeResult(data1) {
   pokéSPD.classList.add("pokemonItemPosition");
   // Log
   console.log(data1);
+  console.log(data2.flavor_text_entries[0].flavor_text);
   // console.log(data1.name);
   // console.log(data1.types[0].type.name);
   // console.log(`HP ${data1.stats[0].base_stat}`);
@@ -131,6 +151,21 @@ function pokeResult(data1) {
     pokéSpDEF,
     pokéSPD
   );
+  console.log(pokéList);
+}
+
+function sort(arr) {
+  return arr.sort((a, b) => {
+    if (sortBy.value == "# ascending") {
+      return b.id.localeCompare(a.id);
+    } else if (sortBy.value == "# descending") {
+      return a.id.localeCompare(b.id);
+    } else if (sortBy.value == "A-Z ascending") {
+      return b.name.localeCompare(a.name);
+    } else if (sortBy.value == "A-Z descending") {
+      return a.name.localeCompare(b.name);
+    }
+  });
 }
 
 // Search
