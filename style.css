@@ -1,430 +1,430 @@
 * {
-    font-family: "Lexend", sans-serif;
-    font-size: 14px;
-    padding: 0px;
-    margin: 0px;
+  font-family: "Lexend", sans-serif;
+  font-size: 14px;
+  padding: 0px;
+  margin: 0px;
 }
 
 body {
-    background-color: #EFF1F0;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
+  background-color: #eff1f0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
-    background-color: #FF0000;
-    border: #000000 solid;
-    border-width: 0px 0px 1px 0px;
-    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
-    height: 100px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #ff0000;
+  border: #000000 solid;
+  border-width: 0px 0px 1px 0px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
-    height: 80px;
+  height: 80px;
 }
 
 .body {
-    gap: 45px;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
+  gap: 45px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
 }
 
 .searchContainer {
-    /* border: 1px #000000 solid; */
-    width: fit-content;
-    top: 20px;
-    gap: 15px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+  /* border: 1px #000000 solid; */
+  width: fit-content;
+  top: 20px;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .searchbar {
-    /* border: 1px #000000 solid; */
-    height: 40px;
-    width: fit-content;
-    display: flex;
+  /* border: 1px #000000 solid; */
+  height: 40px;
+  width: fit-content;
+  display: flex;
 }
 
 .searchbarInput {
-    font-size: 20px;
-    background: #FFFFFF;
-    border: 2px #355C9D solid;
-    border-radius: 10px 0px 0px 10px;
-    outline: none;
-    height: 100%;
-    width: 350px;
-    padding: 0px 8px;
+  font-size: 20px;
+  background: #ffffff;
+  border: 2px #355c9d solid;
+  border-radius: 10px 0px 0px 10px;
+  outline: none;
+  height: 100%;
+  width: 350px;
+  padding: 0px 8px;
 }
 
 .searchbarInput:focus {
-    outline: 2px #355C9D solid;
+  outline: 2px #355c9d solid;
 }
 
 .searchbarButton {
-    font-size: 20px;
-    background: #FFFFFF;
-    border: #666666 solid;
-    border-width: 2px 2px 2px 0px;
-    border-radius: 0px 10px 10px 0px;
-    height: 100%;
-    width: fit-content;
-    padding: 0px 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  font-size: 20px;
+  background: #ffffff;
+  border: #666666 solid;
+  border-width: 2px 2px 2px 0px;
+  border-radius: 0px 10px 10px 0px;
+  height: 100%;
+  width: fit-content;
+  padding: 0px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .searchbarButton:hover {
-    background-color: #EEEEEE;
+  background-color: #eeeeee;
 }
 
 .searchbarButton:active {
-    background-color: #DDDDDD;
+  background-color: #dddddd;
 }
 
 .searchOptions {
-    /* border: 1px #000000 solid; */
-    height: 30px;
-    padding: 0px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  /* border: 1px #000000 solid; */
+  height: 30px;
+  padding: 0px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .filter {
-    font-size: 16px;
-    gap: 5px;
-    display: flex;
+  font-size: 16px;
+  gap: 5px;
+  display: flex;
 }
 
 .filterButton {
-    background: #FFFFFF;
-    border: 1px #000000 solid;
-    border-radius: 20px;
-    height: 24px;
-    width: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  background: #ffffff;
+  border: 1px #000000 solid;
+  border-radius: 20px;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .filterButton img {
-    width: 14px;
+  width: 14px;
 }
 
 .filterDropdown {
-    /* display: inline-block; */
-    position: relative;
+  /* display: inline-block; */
+  position: relative;
 }
 
 .filterDropdownContent {
-    background: #FFFFFF;
-    border: 1px #000000 solid;
-    width: fit-content;
-    margin-top: 24px;
-    display: none;
-    position: absolute;
-    cursor: pointer;
+  background: #ffffff;
+  border: 1px #000000 solid;
+  width: fit-content;
+  margin-top: 24px;
+  display: none;
+  position: absolute;
+  cursor: pointer;
 }
 
 .filterDropdownContent p {
-    color: #000000;
-    padding: 3px 5px;
-    padding-right: 20px;
-    display: block;
+  color: #000000;
+  padding: 3px 5px;
+  padding-right: 20px;
+  display: block;
 }
 
 .filterDropdownContent p:hover {
-    background: #EEEEEE;
+  background: #eeeeee;
 }
 
 .filterDropdownContent p:active {
-    background: #DDDDDD;
+  background: #dddddd;
 }
 
 .filterDropdown:hover .filterDropdownContent {
-    display: block;
+  display: block;
 }
 
 .sortBy {
-    font-size: 16px;
-    gap: 5px;
-    display: flex;
+  font-size: 16px;
+  gap: 5px;
+  display: flex;
 }
 
 .sortByButton {
-    background: #FFFFFF;
-    border: 1px #000000 solid;
-    border-radius: 20px;
-    height: 24px;
-    width: 150px;
-    padding-left: 5px;
-    gap: 5px;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    cursor: pointer;
+  background: #ffffff;
+  border: 1px #000000 solid;
+  border-radius: 20px;
+  height: 24px;
+  width: 150px;
+  padding-left: 5px;
+  gap: 5px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  cursor: pointer;
 }
 
 .sortByButton img {
-    background: #FFFFFF;
-    outline: 1px #000000 solid;
-    border-radius: 20px;
-    width: 14px;
-    padding: 7px 5px;
+  background: #ffffff;
+  outline: 1px #000000 solid;
+  border-radius: 20px;
+  width: 14px;
+  padding: 7px 5px;
 }
 
 .sortByDropdown {
-    /* display: inline-block; */
-    position: relative;
+  /* display: inline-block; */
+  position: relative;
 }
 
 .sortByDropdownContent {
-    background: #FFFFFF;
-    border: 1px #000000 solid;
-    width: 150px;
-    right: 0px;
-    margin-top: 24px;
-    display: none;
-    justify-content: end;
-    position: absolute;
-    cursor: pointer;
+  background: #ffffff;
+  border: 1px #000000 solid;
+  width: 150px;
+  right: 0px;
+  margin-top: 24px;
+  display: none;
+  justify-content: end;
+  position: absolute;
+  cursor: pointer;
 }
 
 .sortByDropdownContent p {
-    color: #000000;
-    padding: 3px 5px;
-    padding-right: 20px;
-    display: block;
+  color: #000000;
+  padding: 3px 5px;
+  padding-right: 20px;
+  display: block;
 }
 
 .sortByDropdownContent p:hover {
-    background: #EEEEEE;
+  background: #eeeeee;
 }
 
 .sortByDropdownContent p:active {
-    background: #DDDDDD;
+  background: #dddddd;
 }
 
 .sortByDropdown:hover .sortByDropdownContent {
-    display: block;
+  display: block;
 }
 
 .main {
-    gap: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  gap: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .buttonSort {
-    /* border: 1px #000000 solid; */
-    height: fit-content;
-    width: 14px;
-    gap: 2px;
-    display: flex;
-    flex-direction: column;
+  /* border: 1px #000000 solid; */
+  height: fit-content;
+  width: 14px;
+  gap: 2px;
+  display: flex;
+  flex-direction: column;
 }
 
 .arrow2 {
-    /* border: 1px #000000 solid; */
-    border: none;
-    border-radius: 3px;
-    height: 12px;
-    width: 100%;
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  /* border: 1px #000000 solid; */
+  border: none;
+  border-radius: 3px;
+  height: 12px;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .arrow2 img {
-    width: 10px;
+  width: 10px;
 }
 
 .arrow2:hover {
-    background-color: #CCCCCC;
+  background-color: #cccccc;
 }
 
 .arrow2:active {
-    background-color: #AAAAAA;
+  background-color: #aaaaaa;
 }
 
 .pokemonSort {
-    background: #EBF1F5;
-    border: #000000 solid;
-    border-width: 0px 0px 1px 0px;
-    height: 30px;
-    display: flex;
+  background: #ebf1f5;
+  border: #000000 solid;
+  border-width: 0px 0px 1px 0px;
+  height: 30px;
+  display: flex;
 }
 
 .pokemonList {
-    border: #000000 solid;
-    border-width: 1px 0px 0px 0px;
-    height: fit-content;
-    width: fit-content;
+  border: #000000 solid;
+  border-width: 1px 0px 0px 0px;
+  height: fit-content;
+  width: fit-content;
 }
 
 .pokemonListItemPosition {
-    padding: 0px 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding: 0px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .pokemonItemPosition {
-    background: #FFFFFF;
-    padding: 0px 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: #ffffff;
+  padding: 0px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pokemon {
-    border: #000000 solid;
-    border-width: 0px 0px 1px 0px;
-    height: 100px;
-    display: flex;
+  border: #000000 solid;
+  border-width: 0px 0px 1px 0px;
+  height: 100px;
+  display: flex;
 }
 
 .pokemonImage {
-    border: #000000 solid;
-    border-width: 0px 0px 0px 1px;
-    height: 100%;
-    width: 100px;
-    justify-content: center;
+  border: #000000 solid;
+  border-width: 0px 0px 0px 1px;
+  height: 100%;
+  width: 100px;
+  justify-content: center;
 }
 
 .pokemonNumber {
-    border: #000000 solid;
-    border-width: 0px 0px 0px 1px;
-    height: 100%;
-    width: 80px;
+  border: #000000 solid;
+  border-width: 0px 0px 0px 1px;
+  height: 100%;
+  width: 80px;
 }
 
 .pokemonName {
-    border: #000000 solid;
-    border-width: 0px 0px 0px 1px;
-    height: 100%;
-    width: 100px;
+  border: #000000 solid;
+  border-width: 0px 0px 0px 1px;
+  height: 100%;
+  width: 100px;
 }
 
 .pokemonType {
-    border: #000000 solid;
-    border-width: 0px 0px 0px 1px;
-    height: 100%;
-    width: 100px;
+  border: #000000 solid;
+  border-width: 0px 0px 0px 1px;
+  height: 100%;
+  width: 100px;
 }
 
 .pokemonHP {
-    border: #000000 solid;
-    border-width: 0px 0px 0px 1px;
-    height: 100%;
-    width: 60px;
+  border: #000000 solid;
+  border-width: 0px 0px 0px 1px;
+  height: 100%;
+  width: 60px;
 }
 
 .pokemonAttack {
-    border: #000000 solid;
-    border-width: 0px 0px 0px 1px;
-    height: 100%;
-    width: 70px;
+  border: #000000 solid;
+  border-width: 0px 0px 0px 1px;
+  height: 100%;
+  width: 70px;
 }
 
 .pokemonDefence {
-    border: #000000 solid;
-    border-width: 0px 0px 0px 1px;
-    height: 100%;
-    width: 100px;
+  border: #000000 solid;
+  border-width: 0px 0px 0px 1px;
+  height: 100%;
+  width: 100px;
 }
 
 .pokemonSpAtk {
-    border: #000000 solid;
-    border-width: 0px 0px 0px 1px;
-    height: 100%;
-    width: 90px;
+  border: #000000 solid;
+  border-width: 0px 0px 0px 1px;
+  height: 100%;
+  width: 90px;
 }
 
 .pokemonSpDef {
-    border: #000000 solid;
-    border-width: 0px 0px 0px 1px;
-    height: 100%;
-    width: 90px;
+  border: #000000 solid;
+  border-width: 0px 0px 0px 1px;
+  height: 100%;
+  width: 90px;
 }
 
 .pokemonSpeed {
-    border: #000000 solid;
-    border-width: 0px 1px 0px 1px;
-    height: 100%;
-    width: 90px;
+  border: #000000 solid;
+  border-width: 0px 1px 0px 1px;
+  height: 100%;
+  width: 90px;
 }
 
 .erlendSinTing {
-    border: #000000 solid;
-    border-width: 0px 1px 0px 1px;
-    height: 100%;
-    width: 100px;
-    justify-content: center;
+  border: #000000 solid;
+  border-width: 0px 1px 0px 1px;
+  height: 100%;
+  width: 150px;
+  justify-content: center;
 }
 
 .sidePanelLeft {
-    border: 2px #000000 solid;
-    height: fit-content;
-    min-height: 10px;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
+  border: 2px #000000 solid;
+  height: fit-content;
+  min-height: 10px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidePanelLeft img {
-    width: 100%;
+  width: 100%;
 }
 
 .sidePanelRight {
-    border: 2px #000000 solid;
-    height: fit-content;
-    min-height: 10px;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
+  border: 2px #000000 solid;
+  height: fit-content;
+  min-height: 10px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidePanelRight img {
-    width: 100%;
+  width: 100%;
 }
 
 .footer {
-    background-color: #EF5350;
-    border: #000000 solid;
-    border-width: 1px 0px 0px 0px;
-    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
-    height: 80px;
-    width: 100%;
-    bottom: 0px;
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #ef5350;
+  border: #000000 solid;
+  border-width: 1px 0px 0px 0px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+  height: 80px;
+  width: 100%;
+  bottom: 0px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer p {
-    color: #EF4744;
-    font-size: 7px;
+  color: #ef4744;
+  font-size: 7px;
 }
 
 .background {
-    width: 100%;
-    opacity: 7%;
-    z-index: -1;
-    position: fixed;
+  width: 100%;
+  opacity: 7%;
+  z-index: -1;
+  position: fixed;
 }
