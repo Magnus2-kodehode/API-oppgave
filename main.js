@@ -55,7 +55,7 @@ async function pokeDex() {
         Math.floor(Math.random() * data1.pokemon_entries.length)
       ];
     let randomID = rng.entry_number;
-    console.log(randomID);
+    // console.log(randomID);
     pokeSearchRandom(randomID);
   } catch (err) {
     console.error(err);
@@ -67,7 +67,7 @@ async function pokeSearchRandom(data1) {
   try {
     const result4 = await fetch(`${apiEndpointPokemon}${data1}`);
     const data2 = await result4.json();
-    console.log(data2);
+    // console.log(data2);
     pokeSpeciesSearch(data2, data1);
   } catch (err) {
     console.error(err);
