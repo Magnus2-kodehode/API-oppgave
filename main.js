@@ -8,6 +8,8 @@ const searchBar = document.querySelector("#Searchbar");
 const submitButton = document.querySelector("#SubmitSearchButton");
 const pokémonField = document.querySelector(".pokemonList");
 const sortBy = document.querySelector(".sortByDropdownContent");
+const pokéBallLeft = document.querySelector(".headerPokeballLeft");
+const pokéBallRight = document.querySelector(".headerPokeballRight");
 
 let pokéList = [];
 
@@ -20,7 +22,7 @@ const apiEndpointSpecies = `https://pokeapi.co/api/v2/pokemon-species/`;
 async function pokeSearch(pokemon) {
   try {
     const result1 = await fetch(
-      `${apiEndpointPokemon}${pokemon.replace(/ /g, "-")}`
+      `${apiEndpointPokemon}${pokemon.replace(/ /, "-")}`
     );
     const data1 = await result1.json();
     // pokeResult(data1);
@@ -168,24 +170,40 @@ function pokeResult(data1, data2) {
   // console.log(pokéList);
 }
 
-function sort(arr) {
-  return arr.sort((a, b) => {
-    if (sortBy.value == "# ascending") {
-      return b.id.localeCompare(a.id);
-    } else if (sortBy.value == "# descending") {
-      return a.id.localeCompare(b.id);
-    } else if (sortBy.value == "Name ascending") {
-      return b.name.localeCompare(a.name);
-    } else if (sortBy.value == "Name descending") {
-      return a.name.localeCompare(b.name);
-    }
-  });
-}
+// function sort(arr) {
+//   return arr.sort((a, b) => {
+//     if (sortBy.value == "# ascending") {
+//       return b.id.localeCompare(a.id);
+//     } else if (sortBy.value == "# descending") {
+//       return a.id.localeCompare(b.id);
+//     } else if (sortBy.value == "Name ascending") {
+//       return b.name.localeCompare(a.name);
+//     } else if (sortBy.value == "Name descending") {
+//       return a.name.localeCompare(b.name);
+//     }
+//   });
+// }
 
 // Search
 submitButton.addEventListener("click", () => {
   pokeSearch(searchBar.value);
 });
+
+pokéBallLeft.addEventListener("click", () => {
+  randomSong();
+});
+pokéBallRight.addEventListener("click", () => {
+  randomSong();
+});
+
+function randomSong() {
+  let num = Math.random();
+  if (num > 0.5) {
+    new Audio("./audio/osas.mp3").play();
+  } else {
+    new Audio("./audio/kekw.mp3").play();
+  }
+}
 
 // async function testFetch() {
 //   try {
