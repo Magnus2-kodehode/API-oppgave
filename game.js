@@ -97,8 +97,8 @@ splashBtn.addEventListener("click", useSplash);
 
 //..... updates the hp
 updateHp();
-// MUSIC
-// window.onload = function () {
-//   const audio = document.getElementById("background-music");
-//   audio.play();
-// };
+MUSIC;
+window.onload = function () {
+  const audio = document.getElementById("background-music");
+  audio.play();
+};
