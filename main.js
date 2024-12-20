@@ -212,9 +212,9 @@ pokéBallRandom.addEventListener("click", () => {
 pokéBallLeft.addEventListener("click", () => {
   randomSong();
 });
-pokéBallRight.addEventListener("click", () => {
-  randomSong();
-});
+// pokéBallRight.addEventListener("click", () => {
+//   randomSong();
+// });
 
 function randomSong() {
   let num = Math.random();
